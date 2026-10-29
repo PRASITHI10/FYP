@@ -1,0 +1,44 @@
+# ============================================================
+# Temporal-RegionRAG
+# Python 3.11 compatible
+# Stage 1: Document ingestion & preprocessing
+# Stage 2: Extraction, OCR, table detection
+# ============================================================
+
+# ----- Web Application ----------------------------------------
+streamlit>=1.32.0,<2.0.0
+
+# ----- PDF Rendering ------------------------------------------
+PyMuPDF>=1.24.0,<2.0.0
+
+# ----- Computer Vision & Image Processing ---------------------
+opencv-python-headless>=4.9.0,<5.0.0
+
+# ----- Image handling -----------------------------------------
+Pillow>=10.2.0,<11.0.0
+
+# ----- Numerical computing ------------------------------------
+# Note: pyarrow>=20 (used by Streamlit dataframes) requires numpy>=2.0.
+numpy>=2.0.0,<3.0.0
+
+# ----- OCR ----------------------------------------------------
+# EasyOCR pulls in PyTorch (CPU-only on arm64 Mac).
+# First run downloads the English model (~40 MB) to ~/.EasyOCR/
+easyocr>=1.7.0,<2.0.0
+
+# ----- Testing ------------------------------------------------
+pytest>=7.0.0
+
+# ----- Optional (table detection — no model weights) ----------
+# Microsoft Table Transformer is NOT included here.
+# Enable in a future stage once its torchvision dependency is confirmed:
+#   transformers>=4.30.0
+#   timm>=0.9.0
+
+# ----- Optional (Stage 6: ColPali visual page retrieval) ------
+# ColPali (vidore/colpali-v1.2, ~6.5 GB PaliGemma-3B weights) is NOT installed
+# by default so the baseline runs offline with OCRPageRetrieverFallback.
+# To enable ColPali later (requires ~7 GB disk & >=16 GB RAM / GPU or MPS):
+#   pip install "colpali-engine>=0.3.0,<0.4.0" "transformers>=4.45.0" "peft>=0.12.0" "accelerate>=0.34.0"
+# Then run with:
+#   ENABLE_COLPALI=1 COLPALI_ALLOW_DOWNLOAD=1 streamlit run app.py

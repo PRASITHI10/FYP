@@ -1,0 +1,1957 @@
+{
+  "benchmark_metadata": {
+    "num_documents": 8,
+    "num_pages": 8,
+    "num_corpus_observations": 25,
+    "num_queries": 15,
+    "query_categories": {
+      "single_date": 6,
+      "temporal_comparison": 4,
+      "conflict_or_uncertainty": 3,
+      "unanswerable_negative": 2
+    },
+    "ocr_extraction_items": 12,
+    "platform": "macOS-15.7.2-arm64-arm-64bit",
+    "python_version": "3.11.4",
+    "process_max_rss_mib": 5819.41,
+    "statistical_note": "Metrics are computed on a deterministic synthetic benchmark (N=15 queries, 25 corpus observations, 12 extraction items). Because N is small and synthetic, no claim of statistical significance or clinical generalization is made."
+  },
+  "visual_retrieval_status": {
+    "colpali_model_name": "vidore/colpali-v1.2",
+    "colpali_installed": false,
+    "transformers_installed": false,
+    "colpali_operational": false,
+    "active_backend_used": "ocr-lexical-page-fallback",
+    "status_note": "ColPali (vidore/colpali-v1.2, ~6.5 GB PaliGemma-3B weights) is not installed in this 16 GiB unified-RAM macOS environment. VisualRetrievalEngine ran with its operational OCRPageRetrieverFallback and connected retrieved pages to detected table regions and page observations."
+  },
+  "ocr_and_extraction": {
+    "total_ground_truth_items": 12,
+    "overall": {
+      "count": 12,
+      "value_accuracy": 0.9166666666666666,
+      "unit_accuracy": 0.8333333333333334,
+      "joint_value_unit_accuracy": 0.8333333333333334,
+      "date_accuracy": 1.0,
+      "bbox_valid_rate": 1.0
+    },
+    "pdf_text": {
+      "count": 8,
+      "value_accuracy": 1.0,
+      "unit_accuracy": 1.0,
+      "joint_value_unit_accuracy": 1.0,
+      "date_accuracy": 1.0,
+      "bbox_valid_rate": 1.0,
+      "latency_ms": 1598.02
+    },
+    "scanned_ocr": {
+      "count": 4,
+      "value_accuracy": 0.75,
+      "unit_accuracy": 0.5,
+      "joint_value_unit_accuracy": 0.5,
+      "date_accuracy": 1.0,
+      "bbox_valid_rate": 1.0,
+      "latency_ms": 4620.81,
+      "mean_ocr_confidence": 0.623,
+      "total_ocr_regions_detected": 8
+    },
+    "item_results": [
+      {
+        "item_id": "EXT_PDF_01",
+        "modality": "pdf_text",
+        "keyword_anchor": "Blood Pressure",
+        "expected_value": 140.0,
+        "predicted_value": 140.0,
+        "expected_unit": "mmHg",
+        "predicted_unit": "mmHg",
+        "predicted_text": "Blood Pressure   : 140/90 mmHg",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_02",
+        "modality": "pdf_text",
+        "keyword_anchor": "Heart Rate",
+        "expected_value": 88.0,
+        "predicted_value": 88.0,
+        "expected_unit": "bpm",
+        "predicted_unit": "bpm",
+        "predicted_text": "Heart Rate   : 88 bpm",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_03",
+        "modality": "pdf_text",
+        "keyword_anchor": "Temperature",
+        "expected_value": 37.2,
+        "predicted_value": 37.2,
+        "expected_unit": "\u00b0C",
+        "predicted_unit": "\u00b0C",
+        "predicted_text": "Temperature   : 37.2 \u00b0C",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_04",
+        "modality": "pdf_text",
+        "keyword_anchor": "Haemoglobin",
+        "expected_value": 12.5,
+        "predicted_value": 12.5,
+        "expected_unit": "g/dL",
+        "predicted_unit": "g/dL",
+        "predicted_text": "Haemoglobin   : 12.5 g/dL",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_05",
+        "modality": "pdf_text",
+        "keyword_anchor": "Blood Glucose",
+        "expected_value": 5.4,
+        "predicted_value": 5.4,
+        "expected_unit": "mmol/L",
+        "predicted_unit": "mmol/L",
+        "predicted_text": "Blood Glucose   : 5.4 mmol/L",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_06",
+        "modality": "pdf_text",
+        "keyword_anchor": "Sodium",
+        "expected_value": 138.0,
+        "predicted_value": 138.0,
+        "expected_unit": "mEq/L",
+        "predicted_unit": "mEq/L",
+        "predicted_text": "Sodium   : 138 mEq/L",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_07",
+        "modality": "pdf_text",
+        "keyword_anchor": "Potassium",
+        "expected_value": 4.1,
+        "predicted_value": 4.1,
+        "expected_unit": "mEq/L",
+        "predicted_unit": "mEq/L",
+        "predicted_text": "Potassium   : 4.1 mEq/L",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_PDF_08",
+        "modality": "pdf_text",
+        "keyword_anchor": "Date of Admission",
+        "expected_value": 15.0,
+        "predicted_value": 15.0,
+        "expected_unit": "",
+        "predicted_unit": null,
+        "predicted_text": "Date of Admission   [15 Jan 1998]",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": null
+      },
+      {
+        "item_id": "EXT_OCR_01",
+        "modality": "scanned_ocr",
+        "keyword_anchor": "Blood Pressure",
+        "expected_value": 140.0,
+        "predicted_value": 140.0,
+        "expected_unit": "mmHg",
+        "predicted_unit": "mmHg",
+        "predicted_text": "Blood Pressure: 140,00 mmHg",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": 0.3987
+      },
+      {
+        "item_id": "EXT_OCR_02",
+        "modality": "scanned_ocr",
+        "keyword_anchor": "HR",
+        "expected_value": 88.0,
+        "predicted_value": 88.0,
+        "expected_unit": "bpm",
+        "predicted_unit": "bpm",
+        "predicted_text": "HR 88 bpm",
+        "value_correct": true,
+        "unit_correct": true,
+        "joint_value_unit_correct": true,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": 0.4544
+      },
+      {
+        "item_id": "EXT_OCR_03",
+        "modality": "scanned_ocr",
+        "keyword_anchor": "37.2",
+        "expected_value": 37.2,
+        "predicted_value": 37.2,
+        "expected_unit": "\u00b0C",
+        "predicted_unit": null,
+        "predicted_text": "Temperture.37.2'C",
+        "value_correct": true,
+        "unit_correct": false,
+        "joint_value_unit_correct": false,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": 0.5734
+      },
+      {
+        "item_id": "EXT_OCR_04",
+        "modality": "scanned_ocr",
+        "keyword_anchor": "Haem",
+        "expected_value": 12.5,
+        "predicted_value": null,
+        "expected_unit": "g/dL",
+        "predicted_unit": null,
+        "predicted_text": "Haemcglobin: 125gdL",
+        "value_correct": false,
+        "unit_correct": false,
+        "joint_value_unit_correct": false,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": 0.5858
+      }
+    ],
+    "error_examples": [
+      {
+        "item_id": "EXT_OCR_03",
+        "modality": "scanned_ocr",
+        "keyword_anchor": "37.2",
+        "expected_value": 37.2,
+        "predicted_value": 37.2,
+        "expected_unit": "\u00b0C",
+        "predicted_unit": null,
+        "predicted_text": "Temperture.37.2'C",
+        "value_correct": true,
+        "unit_correct": false,
+        "joint_value_unit_correct": false,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": 0.5734
+      },
+      {
+        "item_id": "EXT_OCR_04",
+        "modality": "scanned_ocr",
+        "keyword_anchor": "Haem",
+        "expected_value": 12.5,
+        "predicted_value": null,
+        "expected_unit": "g/dL",
+        "predicted_unit": null,
+        "predicted_text": "Haemcglobin: 125gdL",
+        "value_correct": false,
+        "unit_correct": false,
+        "joint_value_unit_correct": false,
+        "date_correct": true,
+        "bbox_valid": true,
+        "ocr_confidence": 0.5858
+      }
+    ]
+  },
+  "configurations": {
+    "A_ocr_lexical_baseline": {
+      "config_id": "A_ocr_lexical_baseline",
+      "num_queries_total": 15,
+      "num_answerable_queries": 13,
+      "num_comparison_queries": 4,
+      "recall_at_1": 0.7179,
+      "recall_at_3": 0.9615,
+      "recall_at_5": 1.0,
+      "page_recall_at_1": 0.7564,
+      "page_recall_at_3": 0.9615,
+      "region_localization_accuracy": 1.0,
+      "evidence_precision": 0.3467,
+      "evidence_f1": 0.4635,
+      "verification_status_accuracy": 0.1333,
+      "source_grounding_accuracy": 1.0,
+      "temporal_date_coverage_accuracy": 0.5,
+      "temporal_chronological_order_accuracy": 0.25,
+      "temporal_comparison_strict_accuracy": 0.25,
+      "mean_latency_ms": 0.721,
+      "p95_latency_ms": 0.83,
+      "peak_heap_kib": 56.81,
+      "error_count": 13,
+      "error_examples": [
+        {
+          "query_id": "Q01",
+          "category": "single_date",
+          "question": "What was the blood pressure on 22 Apr 2002?",
+          "expected_relevant_ids": [
+            "obs_09"
+          ],
+          "predicted_accepted_ids": [
+            "obs_09",
+            "obs_11",
+            "obs_08",
+            "obs_10",
+            "obs_12"
+          ],
+          "expected_verified_ids": [
+            "obs_09"
+          ],
+          "predicted_verified_ids": [
+            "obs_09",
+            "obs_11",
+            "obs_08",
+            "obs_10",
+            "obs_12"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_11 (doc_2002_clinic, 'Fasting Blood Glucose: 6.8 mmol/L', date=22 Apr 2002); obs_08 (doc_2002_clinic, 'Follow-up Clinic Note: Cardiovascular ', date=22 Apr 2002); obs_10 (doc_2002_clinic, 'Heart Rate: 72 bpm', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q02",
+          "category": "single_date",
+          "question": "What was the heart rate on 15 Jan 1998?",
+          "expected_relevant_ids": [
+            "obs_03"
+          ],
+          "predicted_accepted_ids": [
+            "obs_03",
+            "obs_missing_timestamp",
+            "obs_02",
+            "obs_04",
+            "obs_07"
+          ],
+          "expected_verified_ids": [
+            "obs_03"
+          ],
+          "predicted_verified_ids": [
+            "obs_03",
+            "obs_missing_timestamp",
+            "obs_02",
+            "obs_04",
+            "obs_07"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_missing_timestamp (doc_undated_vitals, 'Heart Rate: 84 bpm (routine check)', date=None); obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_04 (doc_1998_admission, 'Body Temperature: 37.2 \u00b0C', date=15 Jan 1998)"
+        },
+        {
+          "query_id": "Q03",
+          "category": "single_date",
+          "question": "What was the HbA1c in November 2005?",
+          "expected_relevant_ids": [
+            "obs_17"
+          ],
+          "predicted_accepted_ids": [
+            "obs_17",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_18"
+          ],
+          "expected_verified_ids": [
+            "obs_17"
+          ],
+          "predicted_verified_ids": [
+            "obs_17",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_18"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_14 (doc_2005_discharge, 'Annual Diabetic & Cardio Review: Compr', date=10 Nov 2005); obs_15 (doc_2005_discharge, 'Blood Pressure: 124/78 mmHg', date=10 Nov 2005); obs_16 (doc_2005_discharge, 'Heart Rate: 70 bpm', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q04",
+          "category": "single_date",
+          "question": "What was the body temperature on 15 Jan 1998?",
+          "expected_relevant_ids": [
+            "obs_04"
+          ],
+          "predicted_accepted_ids": [
+            "obs_04",
+            "obs_02",
+            "obs_03",
+            "obs_07",
+            "obs_duplicate_bp"
+          ],
+          "expected_verified_ids": [
+            "obs_04"
+          ],
+          "predicted_verified_ids": [
+            "obs_04",
+            "obs_02",
+            "obs_03",
+            "obs_07",
+            "obs_duplicate_bp"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998); obs_07 (doc_1998_admission, 'Documented Allergy: Penicillin causes ', date=15 Jan 1998)"
+        },
+        {
+          "query_id": "Q05",
+          "category": "single_date",
+          "question": "What was the total serum cholesterol in 2002?",
+          "expected_relevant_ids": [
+            "obs_12"
+          ],
+          "predicted_accepted_ids": [
+            "obs_12",
+            "obs_06",
+            "obs_19",
+            "obs_08",
+            "obs_09"
+          ],
+          "expected_verified_ids": [
+            "obs_12"
+          ],
+          "predicted_verified_ids": [
+            "obs_12",
+            "obs_06",
+            "obs_19",
+            "obs_08",
+            "obs_09"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "1998-01-15",
+            "2005-11-10",
+            "2002-04-22",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_06 (doc_1998_admission, 'Total Serum Cholesterol: 185 mg/dL', date=15 Jan 1998); obs_19 (doc_2005_discharge, 'Total Serum Cholesterol: 235 mg/dL', date=10 Nov 2005); obs_08 (doc_2002_clinic, 'Follow-up Clinic Note: Cardiovascular ', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q06",
+          "category": "single_date",
+          "question": "What was the fasting blood glucose in 2005?",
+          "expected_relevant_ids": [
+            "obs_18"
+          ],
+          "predicted_accepted_ids": [
+            "obs_18",
+            "obs_ambiguous_date",
+            "obs_05",
+            "obs_11",
+            "obs_15"
+          ],
+          "expected_verified_ids": [
+            "obs_18"
+          ],
+          "predicted_verified_ids": [
+            "obs_18",
+            "obs_ambiguous_date",
+            "obs_05",
+            "obs_11",
+            "obs_15"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "1998-05-04 (ambiguous: or 1998-04-05)",
+            "1998-01-15",
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_ambiguous_date (doc_ambiguous_lab, 'Fasting Blood Glucose: 6.1 mmol/L', date=04/05/1998); obs_05 (doc_1998_admission, 'Fasting Blood Glucose: 5.4 mmol/L', date=15 Jan 1998); obs_11 (doc_2002_clinic, 'Fasting Blood Glucose: 6.8 mmol/L', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q07",
+          "category": "temporal_comparison",
+          "question": "Compare blood pressure in 2002 and 2005",
+          "expected_relevant_ids": [
+            "obs_09",
+            "obs_15"
+          ],
+          "predicted_accepted_ids": [
+            "obs_09",
+            "obs_15",
+            "obs_11",
+            "obs_18",
+            "obs_08"
+          ],
+          "expected_verified_ids": [
+            "obs_09",
+            "obs_15"
+          ],
+          "predicted_verified_ids": [
+            "obs_09",
+            "obs_15",
+            "obs_11",
+            "obs_18",
+            "obs_08"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "2005-11-10",
+            "2002-04-22",
+            "2005-11-10",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.4,
+          "evidence_f1": 0.5714,
+          "explanation": "Included 3 unverified/out-of-scope observation(s): obs_11 (doc_2002_clinic, 'Fasting Blood Glucose: 6.8 mmol/L', date=22 Apr 2002); obs_18 (doc_2005_discharge, 'Fasting Blood Glucose: 7.4 mmol/L', date=10 Nov 2005); obs_08 (doc_2002_clinic, 'Follow-up Clinic Note: Cardiovascular ', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q08",
+          "category": "temporal_comparison",
+          "question": "Compare heart rate in 1998 and 2005",
+          "expected_relevant_ids": [
+            "obs_03",
+            "obs_16"
+          ],
+          "predicted_accepted_ids": [
+            "obs_03",
+            "obs_16",
+            "obs_missing_timestamp",
+            "obs_10",
+            "obs_17"
+          ],
+          "expected_verified_ids": [
+            "obs_03",
+            "obs_16"
+          ],
+          "predicted_verified_ids": [
+            "obs_03",
+            "obs_16",
+            "obs_missing_timestamp",
+            "obs_10",
+            "obs_17"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "2005-11-10",
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.4,
+          "evidence_f1": 0.5714,
+          "explanation": "Included 3 unverified/out-of-scope observation(s): obs_missing_timestamp (doc_undated_vitals, 'Heart Rate: 84 bpm (routine check)', date=None); obs_10 (doc_2002_clinic, 'Heart Rate: 72 bpm', date=22 Apr 2002); obs_17 (doc_2005_discharge, 'Glycated Haemoglobin HbA1c: 7.1 %', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q09",
+          "category": "temporal_comparison",
+          "question": "Compare fasting blood glucose between 2002 and 2005",
+          "expected_relevant_ids": [
+            "obs_11",
+            "obs_18"
+          ],
+          "predicted_accepted_ids": [
+            "obs_11",
+            "obs_18",
+            "obs_ambiguous_date",
+            "obs_05",
+            "obs_09"
+          ],
+          "expected_verified_ids": [
+            "obs_11",
+            "obs_18"
+          ],
+          "predicted_verified_ids": [
+            "obs_11",
+            "obs_18",
+            "obs_ambiguous_date",
+            "obs_05",
+            "obs_09"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "2005-11-10",
+            "1998-05-04 (ambiguous: or 1998-04-05)",
+            "1998-01-15",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.4,
+          "evidence_f1": 0.5714,
+          "explanation": "Included 3 unverified/out-of-scope observation(s): obs_ambiguous_date (doc_ambiguous_lab, 'Fasting Blood Glucose: 6.1 mmol/L', date=04/05/1998); obs_05 (doc_1998_admission, 'Fasting Blood Glucose: 5.4 mmol/L', date=15 Jan 1998); obs_09 (doc_2002_clinic, 'Blood Pressure: 130/80 mmHg', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q11",
+          "category": "conflict_or_uncertainty",
+          "question": "What was the blood pressure on 15 Jan 1998?",
+          "expected_relevant_ids": [
+            "obs_02",
+            "obs_conflict_bp"
+          ],
+          "predicted_accepted_ids": [
+            "obs_02",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr",
+            "obs_conflict_bp",
+            "obs_05"
+          ],
+          "expected_verified_ids": [],
+          "predicted_verified_ids": [
+            "obs_02",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr",
+            "obs_conflict_bp",
+            "obs_05"
+          ],
+          "expected_conflicting_ids": [
+            "obs_02",
+            "obs_conflict_bp"
+          ],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.4,
+          "evidence_f1": 0.5714,
+          "explanation": "Included 3 unverified/out-of-scope observation(s): obs_duplicate_bp (doc_1998_triage, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_low_conf_ocr (doc_faded_scan_1998, 'Blood Pressure: 138/88 mmHg', date=15 Jan 1998); obs_05 (doc_1998_admission, 'Fasting Blood Glucose: 5.4 mmol/L', date=15 Jan 1998) | Conflict detection mismatch (expected ['obs_02', 'obs_conflict_bp'], got []) | Uncertainty flagging mismatch (expected ['obs_duplicate_bp', 'obs_low_conf_ocr'], got []) | Insufficient-evidence flag mismatch (expected True, got False)"
+        },
+        {
+          "query_id": "Q12",
+          "category": "conflict_or_uncertainty",
+          "question": "What was the fasting blood glucose in 1998?",
+          "expected_relevant_ids": [
+            "obs_05"
+          ],
+          "predicted_accepted_ids": [
+            "obs_ambiguous_date",
+            "obs_05",
+            "obs_11",
+            "obs_18",
+            "obs_02"
+          ],
+          "expected_verified_ids": [
+            "obs_05"
+          ],
+          "predicted_verified_ids": [
+            "obs_ambiguous_date",
+            "obs_05",
+            "obs_11",
+            "obs_18",
+            "obs_02"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [
+            "obs_ambiguous_date"
+          ],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-05-04 (ambiguous: or 1998-04-05)",
+            "1998-01-15",
+            "2002-04-22",
+            "2005-11-10",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_ambiguous_date (doc_ambiguous_lab, 'Fasting Blood Glucose: 6.1 mmol/L', date=04/05/1998); obs_11 (doc_2002_clinic, 'Fasting Blood Glucose: 6.8 mmol/L', date=22 Apr 2002); obs_18 (doc_2005_discharge, 'Fasting Blood Glucose: 7.4 mmol/L', date=10 Nov 2005) | Uncertainty flagging mismatch (expected ['obs_ambiguous_date'], got [])"
+        },
+        {
+          "query_id": "Q13",
+          "category": "conflict_or_uncertainty",
+          "question": "What was the heart rate in 2002?",
+          "expected_relevant_ids": [
+            "obs_10"
+          ],
+          "predicted_accepted_ids": [
+            "obs_10",
+            "obs_missing_timestamp",
+            "obs_03",
+            "obs_16",
+            "obs_08"
+          ],
+          "expected_verified_ids": [
+            "obs_10"
+          ],
+          "predicted_verified_ids": [
+            "obs_10",
+            "obs_missing_timestamp",
+            "obs_03",
+            "obs_16",
+            "obs_08"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "1998-01-15",
+            "2005-11-10",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.2,
+          "evidence_f1": 0.3333,
+          "explanation": "Included 4 unverified/out-of-scope observation(s): obs_missing_timestamp (doc_undated_vitals, 'Heart Rate: 84 bpm (routine check)', date=None); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998); obs_16 (doc_2005_discharge, 'Heart Rate: 70 bpm', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q15",
+          "category": "unanswerable_negative",
+          "question": "What was the blood pressure in 1985?",
+          "expected_relevant_ids": [],
+          "predicted_accepted_ids": [
+            "obs_02",
+            "obs_09",
+            "obs_15",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "expected_verified_ids": [],
+          "predicted_verified_ids": [
+            "obs_02",
+            "obs_09",
+            "obs_15",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "2002-04-22",
+            "2005-11-10",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.0,
+          "evidence_f1": 0.0,
+          "explanation": "Included 5 unverified/out-of-scope observation(s): obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_09 (doc_2002_clinic, 'Blood Pressure: 130/80 mmHg', date=22 Apr 2002); obs_15 (doc_2005_discharge, 'Blood Pressure: 124/78 mmHg', date=10 Nov 2005) | Insufficient-evidence flag mismatch (expected True, got False)"
+        }
+      ]
+    },
+    "B_visual_page_retrieval": {
+      "config_id": "B_visual_page_retrieval",
+      "num_queries_total": 15,
+      "num_answerable_queries": 13,
+      "num_comparison_queries": 4,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.3462,
+      "recall_at_5": 0.7692,
+      "page_recall_at_1": 0.7564,
+      "page_recall_at_3": 0.9615,
+      "region_localization_accuracy": 0.9474,
+      "evidence_precision": 0.1502,
+      "evidence_f1": 0.2163,
+      "verification_status_accuracy": 0.0667,
+      "source_grounding_accuracy": 1.0,
+      "temporal_date_coverage_accuracy": 0.5,
+      "temporal_chronological_order_accuracy": 0.25,
+      "temporal_comparison_strict_accuracy": 0.0,
+      "mean_latency_ms": 2.617,
+      "p95_latency_ms": 4.826,
+      "peak_heap_kib": 2480.84,
+      "error_count": 14,
+      "error_examples": [
+        {
+          "query_id": "Q01",
+          "category": "single_date",
+          "question": "What was the blood pressure on 22 Apr 2002?",
+          "expected_relevant_ids": [
+            "obs_09"
+          ],
+          "predicted_accepted_ids": [
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_verified_ids": [
+            "obs_09"
+          ],
+          "predicted_verified_ids": [
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.05,
+          "evidence_f1": 0.0952,
+          "explanation": "Included 19 unverified/out-of-scope observation(s): obs_08 (doc_2002_clinic, 'Follow-up Clinic Note: Cardiovascular ', date=22 Apr 2002); obs_10 (doc_2002_clinic, 'Heart Rate: 72 bpm', date=22 Apr 2002); obs_11 (doc_2002_clinic, 'Fasting Blood Glucose: 6.8 mmol/L', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q02",
+          "category": "single_date",
+          "question": "What was the heart rate on 15 Jan 1998?",
+          "expected_relevant_ids": [
+            "obs_03"
+          ],
+          "predicted_accepted_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_missing_timestamp",
+            "obs_duplicate_bp"
+          ],
+          "expected_verified_ids": [
+            "obs_03"
+          ],
+          "predicted_verified_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_missing_timestamp",
+            "obs_duplicate_bp"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.1111,
+          "evidence_f1": 0.2,
+          "explanation": "Included 8 unverified/out-of-scope observation(s): obs_01 (doc_1998_admission, 'Admission Note: Patient admitted with ', date=15 Jan 1998); obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_04 (doc_1998_admission, 'Body Temperature: 37.2 \u00b0C', date=15 Jan 1998)"
+        },
+        {
+          "query_id": "Q03",
+          "category": "single_date",
+          "question": "What was the HbA1c in November 2005?",
+          "expected_relevant_ids": [
+            "obs_17"
+          ],
+          "predicted_accepted_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_verified_ids": [
+            "obs_17"
+          ],
+          "predicted_verified_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.1429,
+          "evidence_f1": 0.25,
+          "explanation": "Included 6 unverified/out-of-scope observation(s): obs_14 (doc_2005_discharge, 'Annual Diabetic & Cardio Review: Compr', date=10 Nov 2005); obs_15 (doc_2005_discharge, 'Blood Pressure: 124/78 mmHg', date=10 Nov 2005); obs_16 (doc_2005_discharge, 'Heart Rate: 70 bpm', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q04",
+          "category": "single_date",
+          "question": "What was the body temperature on 15 Jan 1998?",
+          "expected_relevant_ids": [
+            "obs_04"
+          ],
+          "predicted_accepted_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "expected_verified_ids": [
+            "obs_04"
+          ],
+          "predicted_verified_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.1111,
+          "evidence_f1": 0.2,
+          "explanation": "Included 8 unverified/out-of-scope observation(s): obs_01 (doc_1998_admission, 'Admission Note: Patient admitted with ', date=15 Jan 1998); obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998)"
+        },
+        {
+          "query_id": "Q05",
+          "category": "single_date",
+          "question": "What was the total serum cholesterol in 2002?",
+          "expected_relevant_ids": [
+            "obs_12"
+          ],
+          "predicted_accepted_ids": [
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_verified_ids": [
+            "obs_12"
+          ],
+          "predicted_verified_ids": [
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.05,
+          "evidence_f1": 0.0952,
+          "explanation": "Included 19 unverified/out-of-scope observation(s): obs_08 (doc_2002_clinic, 'Follow-up Clinic Note: Cardiovascular ', date=22 Apr 2002); obs_09 (doc_2002_clinic, 'Blood Pressure: 130/80 mmHg', date=22 Apr 2002); obs_10 (doc_2002_clinic, 'Heart Rate: 72 bpm', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q06",
+          "category": "single_date",
+          "question": "What was the fasting blood glucose in 2005?",
+          "expected_relevant_ids": [
+            "obs_18"
+          ],
+          "predicted_accepted_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13"
+          ],
+          "expected_verified_ids": [
+            "obs_18"
+          ],
+          "predicted_verified_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.05,
+          "evidence_f1": 0.0952,
+          "explanation": "Included 19 unverified/out-of-scope observation(s): obs_14 (doc_2005_discharge, 'Annual Diabetic & Cardio Review: Compr', date=10 Nov 2005); obs_15 (doc_2005_discharge, 'Blood Pressure: 124/78 mmHg', date=10 Nov 2005); obs_16 (doc_2005_discharge, 'Heart Rate: 70 bpm', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q07",
+          "category": "temporal_comparison",
+          "question": "Compare blood pressure in 2002 and 2005",
+          "expected_relevant_ids": [
+            "obs_09",
+            "obs_15"
+          ],
+          "predicted_accepted_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07"
+          ],
+          "expected_verified_ids": [
+            "obs_09",
+            "obs_15"
+          ],
+          "predicted_verified_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.1,
+          "evidence_f1": 0.1818,
+          "explanation": "Included 18 unverified/out-of-scope observation(s): obs_14 (doc_2005_discharge, 'Annual Diabetic & Cardio Review: Compr', date=10 Nov 2005); obs_16 (doc_2005_discharge, 'Heart Rate: 70 bpm', date=10 Nov 2005); obs_17 (doc_2005_discharge, 'Glycated Haemoglobin HbA1c: 7.1 %', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q08",
+          "category": "temporal_comparison",
+          "question": "Compare heart rate in 1998 and 2005",
+          "expected_relevant_ids": [
+            "obs_03",
+            "obs_16"
+          ],
+          "predicted_accepted_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_missing_timestamp"
+          ],
+          "expected_verified_ids": [
+            "obs_03",
+            "obs_16"
+          ],
+          "predicted_verified_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_missing_timestamp"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.1333,
+          "evidence_f1": 0.2353,
+          "explanation": "Included 13 unverified/out-of-scope observation(s): obs_14 (doc_2005_discharge, 'Annual Diabetic & Cardio Review: Compr', date=10 Nov 2005); obs_15 (doc_2005_discharge, 'Blood Pressure: 124/78 mmHg', date=10 Nov 2005); obs_17 (doc_2005_discharge, 'Glycated Haemoglobin HbA1c: 7.1 %', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q09",
+          "category": "temporal_comparison",
+          "question": "Compare fasting blood glucose between 2002 and 2005",
+          "expected_relevant_ids": [
+            "obs_11",
+            "obs_18"
+          ],
+          "predicted_accepted_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07"
+          ],
+          "expected_verified_ids": [
+            "obs_11",
+            "obs_18"
+          ],
+          "predicted_verified_ids": [
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.1,
+          "evidence_f1": 0.1818,
+          "explanation": "Included 18 unverified/out-of-scope observation(s): obs_14 (doc_2005_discharge, 'Annual Diabetic & Cardio Review: Compr', date=10 Nov 2005); obs_15 (doc_2005_discharge, 'Blood Pressure: 124/78 mmHg', date=10 Nov 2005); obs_16 (doc_2005_discharge, 'Heart Rate: 70 bpm', date=10 Nov 2005)"
+        },
+        {
+          "query_id": "Q10",
+          "category": "temporal_comparison",
+          "question": "Show total serum cholesterol trend over time across all visits",
+          "expected_relevant_ids": [
+            "obs_06",
+            "obs_12",
+            "obs_19"
+          ],
+          "predicted_accepted_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_verified_ids": [
+            "obs_06",
+            "obs_12",
+            "obs_19"
+          ],
+          "predicted_verified_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15",
+            "2002-04-22",
+            "2005-11-10"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.15,
+          "evidence_f1": 0.2609,
+          "explanation": "Included 17 unverified/out-of-scope observation(s): obs_01 (doc_1998_admission, 'Admission Note: Patient admitted with ', date=15 Jan 1998); obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998)"
+        },
+        {
+          "query_id": "Q11",
+          "category": "conflict_or_uncertainty",
+          "question": "What was the blood pressure on 15 Jan 1998?",
+          "expected_relevant_ids": [
+            "obs_02",
+            "obs_conflict_bp"
+          ],
+          "predicted_accepted_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "expected_verified_ids": [],
+          "predicted_verified_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "expected_conflicting_ids": [
+            "obs_02",
+            "obs_conflict_bp"
+          ],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [
+            "obs_duplicate_bp",
+            "obs_low_conf_ocr"
+          ],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.1111,
+          "evidence_f1": 0.1818,
+          "explanation": "Included 8 unverified/out-of-scope observation(s): obs_01 (doc_1998_admission, 'Admission Note: Patient admitted with ', date=15 Jan 1998); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998); obs_04 (doc_1998_admission, 'Body Temperature: 37.2 \u00b0C', date=15 Jan 1998) | Missed ground-truth observation(s): ['obs_conflict_bp'] | Conflict detection mismatch (expected ['obs_02', 'obs_conflict_bp'], got []) | Uncertainty flagging mismatch (expected ['obs_duplicate_bp', 'obs_low_conf_ocr'], got []) | Insufficient-evidence flag mismatch (expected True, got False)"
+        },
+        {
+          "query_id": "Q12",
+          "category": "conflict_or_uncertainty",
+          "question": "What was the fasting blood glucose in 1998?",
+          "expected_relevant_ids": [
+            "obs_05"
+          ],
+          "predicted_accepted_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_ambiguous_date",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13"
+          ],
+          "expected_verified_ids": [
+            "obs_05"
+          ],
+          "predicted_verified_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_ambiguous_date",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [
+            "obs_ambiguous_date"
+          ],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "1998-01-15"
+          ],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-05-04 (ambiguous: or 1998-04-05)",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22"
+          ],
+          "evidence_precision": 0.0714,
+          "evidence_f1": 0.1333,
+          "explanation": "Included 13 unverified/out-of-scope observation(s): obs_01 (doc_1998_admission, 'Admission Note: Patient admitted with ', date=15 Jan 1998); obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998) | Uncertainty flagging mismatch (expected ['obs_ambiguous_date'], got [])"
+        },
+        {
+          "query_id": "Q13",
+          "category": "conflict_or_uncertainty",
+          "question": "What was the heart rate in 2002?",
+          "expected_relevant_ids": [
+            "obs_10"
+          ],
+          "predicted_accepted_ids": [
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_missing_timestamp",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07"
+          ],
+          "expected_verified_ids": [
+            "obs_10"
+          ],
+          "predicted_verified_ids": [
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_missing_timestamp",
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [
+            "2002-04-22"
+          ],
+          "predicted_dates_in_order": [
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15"
+          ],
+          "evidence_precision": 0.0714,
+          "evidence_f1": 0.1333,
+          "explanation": "Included 13 unverified/out-of-scope observation(s): obs_08 (doc_2002_clinic, 'Follow-up Clinic Note: Cardiovascular ', date=22 Apr 2002); obs_09 (doc_2002_clinic, 'Blood Pressure: 130/80 mmHg', date=22 Apr 2002); obs_11 (doc_2002_clinic, 'Fasting Blood Glucose: 6.8 mmol/L', date=22 Apr 2002)"
+        },
+        {
+          "query_id": "Q15",
+          "category": "unanswerable_negative",
+          "question": "What was the blood pressure in 1985?",
+          "expected_relevant_ids": [],
+          "predicted_accepted_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_verified_ids": [],
+          "predicted_verified_ids": [
+            "obs_01",
+            "obs_02",
+            "obs_03",
+            "obs_04",
+            "obs_05",
+            "obs_06",
+            "obs_07",
+            "obs_08",
+            "obs_09",
+            "obs_10",
+            "obs_11",
+            "obs_12",
+            "obs_13",
+            "obs_14",
+            "obs_15",
+            "obs_16",
+            "obs_17",
+            "obs_18",
+            "obs_19",
+            "obs_20"
+          ],
+          "expected_conflicting_ids": [],
+          "predicted_conflicting_ids": [],
+          "expected_uncertain_ids": [],
+          "predicted_uncertain_ids": [],
+          "expected_dates": [],
+          "predicted_dates_in_order": [
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "1998-01-15",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2002-04-22",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10",
+            "2005-11-10"
+          ],
+          "evidence_precision": 0.0,
+          "evidence_f1": 0.0,
+          "explanation": "Included 20 unverified/out-of-scope observation(s): obs_01 (doc_1998_admission, 'Admission Note: Patient admitted with ', date=15 Jan 1998); obs_02 (doc_1998_admission, 'Blood Pressure: 140/90 mmHg', date=15 Jan 1998); obs_03 (doc_1998_admission, 'Heart Rate: 88 bpm', date=15 Jan 1998) | Insufficient-evidence flag mismatch (expected True, got False)"
+        }
+      ]
+    },
+    "C_full_temporal_regionrag": {
+      "config_id": "C_full_temporal_regionrag",
+      "num_queries_total": 15,
+      "num_answerable_queries": 13,
+      "num_comparison_queries": 4,
+      "recall_at_1": 0.7949,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "page_recall_at_1": 0.7564,
+      "page_recall_at_3": 0.9615,
+      "region_localization_accuracy": 1.0,
+      "evidence_precision": 1.0,
+      "evidence_f1": 1.0,
+      "verification_status_accuracy": 1.0,
+      "source_grounding_accuracy": 1.0,
+      "temporal_date_coverage_accuracy": 1.0,
+      "temporal_chronological_order_accuracy": 1.0,
+      "temporal_comparison_strict_accuracy": 1.0,
+      "mean_latency_ms": 1.103,
+      "p95_latency_ms": 1.31,
+      "peak_heap_kib": 48.24,
+      "error_count": 0,
+      "error_examples": []
+    }
+  }
+}
